@@ -4,8 +4,9 @@
 
 #include "../includes/ds/graph.h"
 
-Graph::Graph(const unsigned int nodes, const unsigned int edges) :
-        num_edges(nodes), num_edges(num_edges) {
+Graph::Graph(const unsigned int nodes, const unsigned int edges){
+    this->num_nodes = nodes;
+    this->num_edges = edges;
     this->vis.resize(num_nodes + 1, false);
     this->head.resize(num_nodes + 1, 0);
 }

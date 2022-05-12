@@ -3,4 +3,4 @@ project(cfg)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cfg main.cpp ds/graph.cpp includes/ds/graph.h misc/io.cpp misc/hash.cpp includes/misc/hash.h)
+add_executable(cfg main.cpp ds/graph.cpp includes/ds/graph.h misc/io.cpp includes/misc/hash.h includes/ds/edge.h includes/misc/io.h)

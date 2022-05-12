@@ -2,15 +2,16 @@
 // Created by lanranli-mac on 12/5/2022.
 //
 
-#include "../includes/ds/graph.h"
+#include "../includes/ds/edge.h"
+#include "../includes/misc/io.h"
 #include <string>
 #include <fstream>
+#include <vector>
 
-bool read_edges(Graph &g, const std::string filename) {
+void read_edges(std::vector<Edge>& edges, const std::string &filename) {
     std::ifstream input_file(filename);
-    if(!input_file){
-        return false;
+    unsigned int u, v;
+    while (input_file >> u >> v) {
+        edges.emplace_back(u, v);
     }
-    unsigned u,v;
-
 }
