@@ -8,13 +8,12 @@
 #include <vector>
 
 class Graph {
-    unsigned int num_nodes, num_edges;
+    unsigned int num_nodes;
     std::vector<bool> vis;
     std::vector<unsigned int> head, nxt, to;
 
 public:
-    Graph(const unsigned int, const unsigned int);
-    Graph();
+    Graph(const unsigned int);
     void add_edge(const unsigned int, const unsigned int);
     bool find_edge(const unsigned int, const unsigned int);
 

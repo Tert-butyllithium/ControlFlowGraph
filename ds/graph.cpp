@@ -4,15 +4,10 @@
 
 #include "../includes/ds/graph.h"
 
-Graph::Graph(const unsigned int nodes, const unsigned int edges){
-    this->num_nodes = nodes;
-    this->num_edges = edges;
+Graph::Graph(const unsigned int nodes) : num_nodes(nodes) {
     this->vis.resize(num_nodes + 1, false);
     this->head.resize(num_nodes + 1, 0);
-}
-
-Graph::Graph() {
-    this->num_nodes = this->num_edges = 0;
+    this->add_edge(0, 0);
 }
 
 void Graph::add_edge(const unsigned int u, const unsigned int v) {

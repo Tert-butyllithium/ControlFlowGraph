@@ -24,6 +24,8 @@ public:
     void add(const T &);
 
     unsigned int hash_value(const T &);
+
+    unsigned int size();
 };
 
 
@@ -50,6 +52,11 @@ unsigned int HashTable<T>::hash_value(const T &t) {
         return (res - this->vec.begin()) + 1;
     }
     return 0;
+}
+
+template<typename T>
+unsigned int HashTable<T>::size() {
+    return this->vec.size();
 }
 
 
